@@ -14,12 +14,12 @@ body {
 }
 
 a {
-  color: #47b2e4;
+  color: #074b6a;
   text-decoration: none;
 }
 
 a:hover {
-  color: #73c5eb;
+  color: #a4d7ee;
   text-decoration: none;
 }
 
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #37517e;
+  background: #3DA0E6;
 }
 
 #preloader:before {
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #37517e;
+  border: 6px solid #3DA0E6;
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-mobile a {
   padding: 10px 20px;
   font-size: 15px;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
@@ -330,7 +330,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-mobile .getstarted {
   margin: 15px;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 .navbar-mobile .dropdown ul {
@@ -369,9 +369,28 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+  position: relative; /* Define o contexto de empilhamento */
   width: 100%;
-  height: 80vh;
-  background: #37517e;
+  height: 90vh;
+  overflow: hidden; /* Oculta partes da imagem que saem da seção */
+  color: white; /* Cor do texto, se necessário */
+  z-index: 1; /* Garante que o texto fique acima da imagem */
+}
+
+#hero::before {
+  content: "";
+  background-image: url('../img/background.webp');
+  background-repeat: no-repeat;
+  background-size: cover; /* Faz a imagem cobrir toda a seção */
+  background-position: center;
+  background-attachment: fixed; /* Torna a imagem de fundo fixa */
+  position: absolute; /* Permite que o pseudo-elemento fique em relação ao #hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(4px); /* Aplica desfoque de 3 pixels */
+  z-index: -1; /* Coloca a imagem atrás do conteúdo */
 }
 
 #hero .container {
@@ -380,16 +399,20 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 48px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+  text-shadow: 0px 10px 15px black; /* Sombra suave para destacar o texto */
+  padding: 10px;
 }
 
 #hero h2 {
-  color: rgba(255, 255, 255, 0.6);
+  color: #fff;
   margin-bottom: 50px;
-  font-size: 24px;
+  font-size: 34px;
+  text-shadow: 0px 10px 15px black; /* Sombra suave para destacar o texto */
+  padding: 10px;
 }
 
 #hero .btn-get-started {
@@ -407,7 +430,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #209dd8;
+  background: #3BA0E7;
 }
 
 #hero .btn-watch-video {
@@ -455,11 +478,11 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   #hero h1 {
-    font-size: 28px;
+    font-size: 38px;
     line-height: 36px;
   }
   #hero h2 {
-    font-size: 18px;
+    font-size: 28px;
     line-height: 24px;
     margin-bottom: 30px;
   }
@@ -520,7 +543,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 .section-title h2::before {
@@ -562,7 +585,6 @@ section {
   transition: all 0.4s ease-in-out;
   display: inline-block;
   padding: 15px 0;
-  filter: grayscale(100);
 }
 
 .cliens img:hover {
@@ -644,7 +666,7 @@ section {
 .why-us .content h3 {
   font-weight: 400;
   font-size: 34px;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 .why-us .content h4 {
@@ -765,7 +787,7 @@ section {
 .skills .content h3 {
   font-weight: 700;
   font-size: 32px;
-  color: #37517e;
+  color: #3DA0E6;
   font-family: "Poppins", sans-serif;
 }
 
@@ -802,7 +824,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 .skills .progress .skill .val {
@@ -849,7 +871,7 @@ section {
 }
 
 .services .icon-box h4 a {
-  color: #37517e;
+  color: #3DA0E6;
   transition: ease-in-out 0.3s;
 }
 
@@ -1108,7 +1130,7 @@ section {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 .team .member span {
@@ -1154,7 +1176,7 @@ section {
 }
 
 .team .member .social a i {
-  color: #37517e;
+  color: #3DA0E6;
   font-size: 16px;
   margin: 0 2px;
 }
@@ -1191,12 +1213,12 @@ section {
   font-weight: 500;
   margin-bottom: 15px;
   font-size: 20px;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 .pricing h4 {
   font-size: 48px;
-  color: #37517e;
+  color: #3DA0E6;
   font-weight: 400;
   font-family: "Jost", sans-serif;
   margin-bottom: 25px;
@@ -1357,7 +1379,7 @@ section {
 }
 
 .faq .faq-list a.collapsed {
-  color: #37517e;
+  color: #3DA0E6;
   transition: 0.3s;
 }
 
@@ -1410,7 +1432,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 .contact .info p {
@@ -1553,7 +1575,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #209dd8;
+  background: #3BA0E7;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1593,7 +1615,7 @@ section {
 .breadcrumbs h2 {
   font-size: 28px;
   font-weight: 600;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 .breadcrumbs ol {
@@ -1621,7 +1643,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   font-size: 14px;
-  background: #37517e;
+  background: #3DA0E6;
 }
 
 #footer .footer-newsletter {
@@ -1638,7 +1660,7 @@ section {
   padding: 0;
   line-height: 1;
   font-weight: 600;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 #footer .footer-newsletter form {
@@ -1674,7 +1696,7 @@ section {
 }
 
 #footer .footer-newsletter form input[type="submit"]:hover {
-  background: #209dd8;
+  background: #3BA0E7;
 }
 
 #footer .footer-top {
@@ -1693,7 +1715,7 @@ section {
   line-height: 1;
   text-transform: uppercase;
   font-weight: 600;
-  color: #37517e;
+  color: #3DA0E6;
 }
 
 #footer .footer-top .footer-contact p {
@@ -1707,7 +1729,7 @@ section {
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #37517e;
+  color: #3DA0E6;
   position: relative;
   padding-bottom: 12px;
 }
@@ -1767,7 +1789,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #209dd8;
+  background: #3BA0E7;
   color: #fff;
   text-decoration: none;
 }
