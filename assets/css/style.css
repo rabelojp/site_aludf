@@ -369,28 +369,27 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  position: relative; /* Define o contexto de empilhamento */
+  position: relative;
   width: 100%;
   height: 90vh;
-  overflow: hidden; /* Oculta partes da imagem que saem da seção */
-  color: white; /* Cor do texto, se necessário */
-  z-index: 1; /* Garante que o texto fique acima da imagem */
+  overflow: hidden;
+  color: white;
+  z-index: 1;
 }
 
 #hero::before {
   content: "";
   background-image: url('../img/background.webp');
   background-repeat: no-repeat;
-  background-size: cover; /* Faz a imagem cobrir toda a seção */
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Torna a imagem de fundo fixa */
-  position: absolute; /* Permite que o pseudo-elemento fique em relação ao #hero */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  filter: blur(4px); /* Aplica desfoque de 3 pixels */
-  z-index: -1; /* Coloca a imagem atrás do conteúdo */
+  filter: blur(4px); 
+  z-index: -1;
 }
 
 #hero .container {
@@ -403,7 +402,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
-  text-shadow: 0px 10px 15px black; /* Sombra suave para destacar o texto */
+  text-shadow: 0px 10px 15px black;
   padding: 10px;
 }
 
@@ -411,7 +410,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   margin-bottom: 50px;
   font-size: 34px;
-  text-shadow: 0px 10px 15px black; /* Sombra suave para destacar o texto */
+  text-shadow: 0px 10px 15px black; 
   padding: 10px;
 }
 
